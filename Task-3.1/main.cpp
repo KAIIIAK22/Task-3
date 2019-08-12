@@ -4,33 +4,21 @@ using namespace std;
 
 int main()
 {
-    string a;
+    char n;
     int swtch=0, amount=0;
-    getline(cin,a, '\n');
-    for(int i=0;i<a.length();i++)
-    switch (a[i])
+    while (1)
     {
-        case 'a' ... 'z':
+        cin.get(n);
+        if (n=='\n') break;
+        if ((n>='a' && n<='z') || (n>='A' && n<='Z'))
+        {
             if (swtch==0)
             {
                 swtch=1;
                 amount+=1;
             }
-            break;
-
-        case 'A' ... 'Z':
-            if (swtch==0)
-            {
-                swtch=1;
-                amount+=1;
-            }
-            break;
-
-        default:
-            if (swtch==1)
-            swtch=0;
-
+        }
+        else if (swtch==1) swtch=0;
     }
-    cout << amount << endl;
-    return 0;
+    cout << amount;
 }
