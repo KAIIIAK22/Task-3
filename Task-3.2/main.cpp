@@ -15,7 +15,6 @@ int main()
 
         if ((line[i]>='a' && line[i]<='z') || (line[i]>='A' && line[i]<='Z'))
         {
-            //cout << line[i];
             if (swtch==0)
             {
 
@@ -36,7 +35,6 @@ int main()
                amount=0;
             }
     }
-    //cout << maxim;
     for (int i = Pos2;i<(Pos2+maxim);i++) cout << line[i];
 
     return 0;
